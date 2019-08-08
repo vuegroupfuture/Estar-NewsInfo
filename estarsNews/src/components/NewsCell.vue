@@ -1,10 +1,10 @@
 <template>
 <div class="newsCell">
-   <div class="news-cell-title">短期阻力</div>
-   <div class="news-cell-content">对冲研投讯，根反倒是几个就看见的垃圾广东省解放军第四届跟领导说佳都科技拉家带口赶紧删了独孤伽罗几分ID圣诞节看过就拉倒就刚开始就国际快递</div>
+   <div class="news-cell-title">{{NewsInfo.title}}</div>
+   <div class="news-cell-content">{{NewsInfo.content}}</div>
    <div class="news-cell-bottom">
-      <div class="news-cell-time">2019-07-26 12:34</div>
-      <div class="news-cell-type">农产品</div>
+      <div class="news-cell-time">{{NewsInfo.time}}</div>
+      <div class="news-cell-type" v-for="newsTag in NewsInfo.newsTag">{{newsTag}}</div>
    </div>
    
 </div>
@@ -13,6 +13,14 @@
 <script>
 export default {
     name: 'NewsCell',
+    props: {
+        NewsInfo: {
+            title:String,
+            content:String,
+            time:String,
+            newsTag:[String]
+        }
+    }
 }
 </script>
 
@@ -33,7 +41,7 @@ export default {
         text-align: left;
         font-size: 14px;
         flex: 1 1 auto;
-        height: 40px;
+        height: 60px;
         overflow: hidden;
     }
     .news-cell-bottom {

@@ -9,6 +9,7 @@
   </div>
 </template>
 
+
 <style lang="less">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -26,5 +27,9 @@
       color: #42b983;
     }
   }
+}
+.tmpData {
+  width: 100%;
+  height: 200px;
 }
 </style>
